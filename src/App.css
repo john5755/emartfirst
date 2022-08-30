@@ -1,0 +1,265 @@
+.card {
+  /* Add shadows to create the "card" effect */
+  display: flex;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  order: 9;
+  flex-grow: 1;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.tabs{
+  order: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin-right: 0.2rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background ease 0.3s;
+  white-space: nowrap;
+}
+
+.nav-back{
+  flex-grow: 1;
+}
+
+.nav-title{
+  flex-grow: 3;
+  font-weight: bold;
+}
+
+.nav-menu{
+  flex-grow: 1;
+}
+
+.page {
+  position: relative;
+  width: 576px;
+  height: 95vh;
+}
+
+.scrollbox {
+  position: relative;
+  width: 100%;
+  height: 85%;
+  padding: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+.page::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  height: calc(100%-20px);
+  top: 10px;
+  right: -1px;
+  width: 5px;
+  background: #fff;
+}
+
+.scrollbox::-webkit-scrollbar {
+  display: block;
+  width: 5px;
+}
+
+.scrollbox::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbox::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-right: none;
+  border-left: none;
+}
+
+.scrollbox::-webkit-scrollbar-track-piece:end {
+  background: transparent;
+  margin-bottom: 10px;
+}
+
+.pageBox{
+  text-align: center;
+  width: 50%;
+}
+
+.pagination{
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.pagination li{
+  display: inline;
+  text-align: center;
+}
+
+.pagination a{
+  float: left;
+  display: block;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 5px 12px;
+  color: black;
+  line-height: 1.5;
+}
+
+.pagination .pageNum{
+ margin-left: 3px;
+ padding: 0;
+ width: 30px;
+ height: 30px;
+ line-height: 30px;
+ -moz-border-radius: 100%;
+ -webkit-border-radius: 100%;
+ border-radius: 100%;
+}
+
+.pagination a.active{
+  cursor: default;
+  color: gray;
+}
+
+.pagination a:active{
+  outline: none;
+}
+
+.pagination .pageNum:hover{
+  background-color: gray;
+  color: white;
+}
+
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+
+.dropdown:hover .dropbtn{
+  background-color: gray;
+}
+
+.tabbox{
+  width: 576px;
+  height: 100%;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.tabbox::-webkit-scrollbar {
+  display: block;
+  height: 4px;
+}
+
+.tabbox::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tabbox::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-right: none;
+  border-left: none;
+}
+
+.tabbox::-webkit-scrollbar-track-piece:end {
+  background: transparent;
+  margin-bottom: 10px;
+}
+
+.item-img{
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-img-img{
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 8%;
+}
+
+.tabbox > label {
+  position: relative;
+  display: inline-block;
+  padding: 15px 15px 25px;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  cursor: pointer;
+  font-weight: 600;
+  height: 30px;
+}
+
+.tabbox > label::after{
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: 5px;
+  width: 22px;
+  height: 4px;
+  background: #8d8d8d;
+}
+
+.tabbox > label:hover,
+.tabbox > input:focus + label {
+  color: black;
+}
+
+.tabbox > label:hover::after,
+.tabbox > input:focus + label::after,
+.tabbox > input:checked + label::after{
+  background: black;
+}
+
+.tabbox > input:checked + label{
+  border-color: #ccc;
+  border-bottom: 1px solid #fff;
+  margin-bottom: -1px;
+}
+
+.tabset {
+  display: none;
+}
