@@ -15,9 +15,10 @@ function App() {
   // SearchResult
   const [items, setItems] = useState([])
   const [results, setResults] = useState([])
-  const [pageNum, setPageNum] = useState(0)
-  const [nowNum, setNowNum] = useState(0)
+  const [pageNum, setPageNum] = useState(0) // item 숫자에 따른 페이지 숫자
+  const [nowNum, setNowNum] = useState(0) // 현재 활성화된 page
 
+  // page 바꾸기
   function changePages(idx, event){
     const before = document.getElementsByClassName('pageNum active')
     before.item(0).classList.remove('active')
@@ -26,6 +27,7 @@ function App() {
     setNowNum(idx)
   }
 
+  // tab에 따른 items 교체
   function changeItems(idx, event){
     if (idx === 0){
       getResult()
@@ -48,6 +50,7 @@ function App() {
     setNowNum(0)
   }
 
+  // 전체 items 세팅
   function getResult(){
     axios.get('/api/items.json')
     .then(res=>{
@@ -63,6 +66,7 @@ function App() {
     })
   }
 
+  // go to top
   function topFunction() {
     document.querySelector('.scrollbox').scrollTop = 0
   }

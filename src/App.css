@@ -1,3 +1,5 @@
+/* card */
+
 .card {
   /* Add shadows to create the "card" effect */
   display: flex;
@@ -16,6 +18,8 @@
 .container {
   padding: 2px 16px;
 }
+
+/* Products */
 
 .wrapper {
   display: flex;
@@ -48,6 +52,8 @@
 .nav-menu{
   flex-grow: 1;
 }
+
+/* product overflow - y scroll */
 
 .page {
   position: relative;
@@ -95,6 +101,8 @@
   background: transparent;
   margin-bottom: 10px;
 }
+
+/* pagination */
 
 .pageBox{
   text-align: center;
@@ -148,6 +156,8 @@
   color: white;
 }
 
+/* dropdown */
+
 .dropdown{
   position: relative;
   display: inline-block;
@@ -181,6 +191,8 @@
   background-color: gray;
 }
 
+/* tabbox overflow - x scroll */
+
 .tabbox{
   width: 576px;
   height: 100%;
@@ -208,6 +220,8 @@
   margin-bottom: 10px;
 }
 
+/* product Image */
+
 .item-img{
   overflow: hidden;
   display: flex;
@@ -221,6 +235,8 @@
   object-fit: cover;
   border-radius: 8%;
 }
+
+/* tabbox active */
 
 .tabbox > label {
   position: relative;
